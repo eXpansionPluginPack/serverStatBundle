@@ -1,0 +1,45 @@
+{% extends "base.html.twig" %}
+
+{% block body %}
+    <h2>Maps</h2>
+
+    <table class="uk-table">
+        <thead>
+            <tr>
+                <th>#Id</th>
+                <th>Name</th>
+                <th>Author</th>
+                <th>Environment</th>
+                <th>Avg Time</th>
+                <th>Nb Player</th>
+                <th>Added(d/m/y)</th>
+            </tr>
+        </thead>
+        {% for map in maps %}
+            <tr>
+                <td>
+                    {{ map.challenge_id }}
+                </td>
+                <td>
+                    {{ map.challenge_name_formatted | raw }}
+                </td>
+                <td>
+                    {{ map.challenge_author }}
+                </td>
+                <td>
+                    {{ map.challenge_environment }}
+                </td>
+                <td>
+                    {{ map.avg_time_formatted }}
+                </td>
+                <td>
+                    {{ map.nb_player }}
+                </td>
+                <td>
+                    {{ map.challenge_addtime | date("d/m/Y") }}
+                </td>
+            </tr>
+        {% endfor %}
+    </table>
+
+{% endblock %}

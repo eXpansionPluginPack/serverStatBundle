@@ -1,0 +1,23 @@
+{
+    "name": "oliverde8/ml-expansion-server-stat-bundle",
+    "description": "A bundle to display information in your eXpansion database",
+    "license": "GNU",
+    "homepage": "https://github.com/eXpansionPluginPack/serverStatBundle",
+    "authors": [
+        {
+            "name": "Oliver de Cramer"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.3",
+        "symfony/symfony": "2.6.*",
+        "Doctrine/Common": "2.4.*",
+        "manialib/formatting": "4.0.*@dev",
+        "oliverde8/mp-dedicated-server-bundle": "dev-master"
+
+    },
+    "autoload": {
+        "psr-0": { "MlExpansion\\ServerStatsBundle": "" }
+    },
+    "target-dir": "MlExpansion/ServerStatsBundle"
+}

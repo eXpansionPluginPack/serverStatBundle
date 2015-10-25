@@ -1,0 +1,7 @@
+ml_expansion_server_stat_overview:
+    path:     /
+    defaults: { _controller: MlExpansionServerStatsBundle:Overview:index }
+
+ml_expansion_server_stat_map:
+    path:     maps/{page}/{nPerPage}
+    defaults: { _controller: MlExpansionServerStatsBundle:Map:index, page:1, nPerPage:20}

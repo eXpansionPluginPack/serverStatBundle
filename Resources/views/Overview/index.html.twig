@@ -1,0 +1,16 @@
+{% extends "base.html.twig" %}
+
+{% block body %}
+    <div class="uk-grid" data-uk-grid-margin>
+        {% for login, name in servers %}
+            {{
+                render(
+                    controller(
+                        "oliverde8MPDedicatedServerBundle:Block:serverWidget",
+                        {'urlPath': 'oliverde8_mp_dedicated_server_demo', 'class': 'uk-width-large-1-3 uk-width-medium-1-2', 'login': login, 'standolone': '1'}
+                    )
+                )
+            }}
+        {% endfor %}
+    </div>
+{% endblock %}
